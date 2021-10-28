@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+
+<body>
+    <script>
+        // const person = {
+        //     lastName: undefined
+        // }
+        // const result = "firstName" in person;
+        // document.writeln(`<p>${result}</p>`);
+
+        // if ("firstName" in person) {
+        //     document.writeln(`<p>Haloooo ${person.firstName} ${person.lastName}</p>`);
+        // } else {
+        //     document.writeln(`Haloooo`);
+        // }
+
+        // const resultPerson = "lastName" in person;
+        // document.writeln(`<p>${resultPerson}</p>`);
+
+        // const name = [null, "Oka", null];
+        // const resultName = 0 in name;
+        // document.writeln(`<p>${resultName}</p>`);
+
+        const person = {
+            firstName: "Oka",
+            middleName: undefined,
+            lastName: "Widiawan"
+        }
+
+        if ("middleName" in person) {
+            document.writeln(`<p>Halooo ${person.middleName}</p>`);
+        } else {
+            document.writeln(`<p>Halooo`);
+        }
+
+        const names = [null, "Oka", null];
+        if (0 in names) {
+            document.writeln(`<p>Halooo ${names[0]}</p>`);
+        } else {
+            document.writeln(`<p>Halooo</p>`);
+        }
+
+
+    </script>
+</body>
+
+</html>

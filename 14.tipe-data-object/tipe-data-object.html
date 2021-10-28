@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+
+<body>
+    <script>
+        // Menggunakan / mendeklarasikan object
+        // const person = {};
+        // atau bisa langsung dengan propertiesnya
+        const person = {
+            "nama lengkap": "Oka Widiawan",
+            alamat: "Jakarta",
+            umur: 29
+        };
+
+        // Menambah /  mengubah value pada object
+
+        // person["nama"] = "Oka Widiawan";
+        // person["alamat"] = "Jakarta";
+        // person["umur"] = 29;
+
+        // Menghapus data object
+        // delete person["umur"];
+
+        // Menampilkan data object
+        console.table(person);
+
+        console.info(`Nama : ${person["nama lengkap"]}`); //bisa menggunakan kurung kotak mengakses propertinya jika nama propertinya lebih dari satu kata
+        console.info(`Alamat : ${person.alamat}`); //atau langsung dengan titik jika nama properti hanya satu kata
+        console.info(`Umur : ${person.umur}`);
+    </script>
+</body>
+
+</html>

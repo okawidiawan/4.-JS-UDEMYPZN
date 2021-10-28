@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+
+<body>
+    <script>
+        // Tanpa with statement
+        const person = {
+            firstName: "Oka",
+            middleName: "Ozu",
+            lastName: "Widiawan"
+        };
+        document.writeln(`<p>${person.firstName}</p>`);
+        document.writeln(`<p>${person.middleName}</p>`);
+        document.writeln(`<p>${person.lastName}</p>`);
+
+
+
+        // Dengan with statement
+        with (person) {
+            document.writeln(`<p>${firstName}</p>`);
+            document.writeln(`<p>${middleName}</p>`);
+            document.writeln(`<p>${lastName}</p>`);
+        }
+    </script>
+</body>
+
+</html>
