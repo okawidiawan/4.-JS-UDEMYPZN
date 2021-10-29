@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+
+<body>
+    <script>
+        /* function generator sederhana
+
+        buat function generator */
+        function* functionGenerator() {
+            yield "Oka";
+            yield "Widiawan",
+                yield "Ozu",
+                yield "Bezarius"
+        }
+
+        // masukan function generator ke dalam variable
+        const names = functionGenerator();
+        // gunakan for of
+        for (const name of names) {
+            console.info(name);
+        }
+
+        /*function generator kompleks
+        
+        buat function generator*/
+        // LAZY
+        function* gage(value) {
+            // gunakan for untuk perulangan
+            for (i = 1; i <= value; i++) {
+                // gunakan if untuk menentukan kondisi ganjil atau genap
+                if (i % 2 === 1) {
+                    console.info(`Yield ke - ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        // EAGER
+        function gageArray(value) {
+            const result = [];
+            for (i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield ke - ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+
+        // masukkan function ke dalam variable
+        const hasil = gage(10);
+
+        // gunakan forof untuk menampilkan hasilnya
+        // for (const angka of hasil) {
+        //     console.log(angka);
+        // }
+        console.info(hasil.next().value);
+        console.info(hasil.next().value);
+        console.info(hasil.next().value);
+
+
+    </script>
+</body>
+
+</html>

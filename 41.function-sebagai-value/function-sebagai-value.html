@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Sebagai Value</title>
+</head>
+
+<body>
+    <script>
+        function sayHello(nama) {
+            document.writeln(`<p>Halooooo ${nama}</p>`);
+        }
+
+        let say = sayHello; //merubah function menjadi value dalam variable
+        sayHello("Ozu");
+        say("Oka Widiawan");
+
+        function giveMeName(callback) {
+            callback("Okaaa");
+        }
+
+        giveMeName(sayHello);
+        /* illustrasi
+        function giveMeName(sayHello){
+            sayHello("Okaaa");
+        }
+        */
+
+        giveMeName(say);
+    </script>
+</body>
+
+</html>

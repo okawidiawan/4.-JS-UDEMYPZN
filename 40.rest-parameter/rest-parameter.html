@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+    <script>
+        // function sum(name, ...data) {
+        //     let total = 0;
+        //     for (const item of data) {
+        //         console.log(data.length);
+        //         total += item;
+        //     }
+        //     document.writeln(`<p>Total ${name} is ${total}</p>`);
+        // }
+        // sum('Orange', 1, 2, 3, 4, 5);
+
+        function hitungIpk(name, ...ip) {
+            let ipk = 0;
+            for (const nilai of ip) {
+                ipk += nilai / ip.length;
+            }
+            document.writeln(`<p>Nama : ${name}, IPK Kamu : ${ipk}</p>`);
+        }
+
+        const nilai = [90, 90, 80, 70, 89];
+        hitungIpk("Oka", ...nilai); //untuk megirimkan data yang berupa array, gunakan spread syntax dengan menambahkan (...)titik 3 kali sebelum variablenya
+
+
+        // sebelum adanya rest parameter, dulu digunakan arguments object
+        function oldHitungIpk() {
+            let ipk = 0;
+            for (const nilai of arguments) {
+                ipk += nilai / arguments.length;
+            }
+            document.writeln(`<p>IPK Kamu : ${ipk}<p>`);
+        }
+
+        oldHitungIpk(90, 90, 90, 80, 80);
+    </script>
+</body>
+
+</html>
