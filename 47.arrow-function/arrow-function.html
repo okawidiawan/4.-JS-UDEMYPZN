@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        // membuat arrow function
+        const sayHello = (name) => {
+            document.writeln(`<p>Haloooo ${name}</p>`);
+        }
+
+        // jika arrow function hanya satu baris, bisa langsung tanpa block
+        const sayHelloTanpaBlock = (name) => document.writeln(`<p>Halooo ${name}, Saya arrow function tanpa block</p>`);
+
+        // arrow function tanpa block untuk mengembalikan value / return
+        const hitung = (a, b) => a + b;
+
+        // jika menggunakan block, kata kunci return harus disertakan
+        const hitungBlock = (a, b) => {
+            return a + b;
+        }
+
+        // jika arrow function hanya punya 1 parameter bisa tidak menggunakan tanda kurung ()
+        const sayHelloSatuParameter = name => document.writeln(`<p>Halooo ${name}, Saya parameter tanpa kurung ()</p>`)
+
+        // arrow function sebagai parameter
+        function giveMeName(callback) {
+            callback("Oka");
+        }
+        giveMeName(name => document.writeln(`<p>Halooo nama saya ${name}</p>`));
+
+
+
+        // memanggil function
+        sayHello("Oka");
+        sayHelloTanpaBlock("Oka");
+        sayHelloSatuParameter("Oka");
+        document.writeln(`<p>${hitung(10, 100)}</p>`);
+        document.writeln(`<p>${hitungBlock(100, 100)}</p>`);
+    </script>
+</body>
+
+</html>

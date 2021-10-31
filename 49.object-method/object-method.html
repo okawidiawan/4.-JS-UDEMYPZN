@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+
+<body>
+    <script>
+
+        // Cara membuat method ke - 1
+        // const person = {
+        //     name: "Oka Widiawan",
+        //     sayHello: function (name) {
+        //         document.writeln(`<p>Halooo ${name}</p>`);
+        //     }
+        // }
+        // person.sayHello("Oka");
+
+        // Cara membuat method ke - 2 (Jika objectnya sudah ada dan ingin memasukkan function ke dalam object)
+        const person = {
+            name: "Oka"
+        }
+
+        person.sayHello = function (name) {
+            document.writeln(`<p>Hayyy ${name}</p>`);
+        }
+
+        person.sayHello("Widiawan");
+
+
+    </script>
+</body>
+
+</html>
