@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+
+<body>
+    <script>
+
+        'use strict';  // pada beberapa syntax yang sudah tidak direkomendasikan lagi akan dijadikan error
+        function useStrictMode() {
+            // 'use strict'; // strict mode bisa digunakan di awal script atau di dalam function di baris awal
+            const person = {
+                firstName: "Oka"
+            }
+            with (person) {
+                console.info(firstName);
+            }
+        }
+        useStrictMode();
+    </script>
+</body>
+
+</html>
