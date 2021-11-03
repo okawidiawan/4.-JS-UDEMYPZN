@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Super Method</title>
+</head>
+
+<body>
+    <script>
+        class Shape {
+            paint() {
+                console.info("Paint Shape");
+            }
+            gambar() {
+                console.info("Gambar Shape");
+            }
+            segitiga(a, t) {
+                return (a * t) / 2;
+            }
+
+        }
+        class Circle extends Shape {
+            paint() {
+                super.paint();
+                super.gambar();
+                console.info(super.segitiga(5, 5));
+                console.info("Paint Circle");
+            }
+        }
+        const shape = new Shape;
+        console.info(shape.segitiga(5, 5));
+        const circle = new Circle;
+        circle.paint();
+    </script>
+</body>
+
+</html>
