@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instanceof</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(firstName, lastName) {
+
+            }
+        }
+
+        class Machine {
+            constructor(id, series) {
+            }
+        }
+
+        class Device extends Machine {
+
+        }
+
+        const oka = new Person();
+        const ozu = new Machine();
+        const mirajane = new Device();
+
+        console.info(typeof oka);
+        console.info(typeof ozu);
+
+        // intanceof digunakan untuk mengecek sebuah instance object dibuat dari class apa
+        console.info(oka instanceof Person);
+        console.info(oka instanceof Machine);
+        console.info(oka instanceof Device);
+
+        console.info(ozu instanceof Person);
+        console.info(ozu instanceof Machine);
+        console.info(ozu instanceof Device);
+
+        console.info(mirajane instanceof Person);
+        console.info(mirajane instanceof Machine);
+        console.info(mirajane instanceof Device);
+
+    </script>
+</body>
+
+</html>

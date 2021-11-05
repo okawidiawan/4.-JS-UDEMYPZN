@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        {
+            // Array loop dengan forEach()
+            console.info("------- forEach -------");
+            const animals = ["Kucing", "Kelinci", "Bebek", "Ayam", "Tikus", "Gajah"];
+            animals.forEach((animal, index) => { console.info(`${index}.${animal}`); });
+            // forEach jika tidak butuh data indexnya
+            animals.forEach(animal => { console.info(animal); });
+        }
+
+        {
+            // Array queue
+            console.info("------- Array Queue -------");
+            const animals = ["Kucing", "Kelinci", "Bebek"];
+            animals.push("Ayam");
+            animals.push("Tikus");
+            animals.push("Gajah");
+
+            console.info(animals);
+            console.info(animals.shift());
+            console.info(animals.shift());
+            console.info(animals);
+        }
+
+        {
+            console.info("------- Array Stack -------");
+            const animals = ["Kucing", "Kelinci", "Bebek"];
+            animals.push("Ayam");
+            animals.push("Tikus");
+            animals.push("Gajah");
+
+            console.info(animals);
+            console.info(animals.pop());
+            console.info(animals.pop());
+            console.info(animals.pop());
+            console.info(animals);
+        }
+
+        {
+            console.info("------- Array Search -------");
+            const animals = ["Kucing", "Kelinci", "Bebek", "Ayam", "Tikus", "Gajah"];
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 1, 3, 5, 7];
+
+            console.info(numbers.find(value => value > 1)); // 2
+            console.info(numbers.findIndex(value => value > 4)); // 4
+            console.info(numbers.includes(9)); // false
+            console.info(numbers.indexOf(1)); // mencari angka 1 dari index pertama
+            console.info(numbers.lastIndexOf(3)); // mencari angka 3 dari index terakhir
+            console.info();
+        }
+
+        {
+            console.info("------- Array Filter -------");
+            const animals = ["Kucing", "Kelinci", "Bebek", "Ayam", "Tikus", "Gajah"];
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            console.info(numbers.filter(value => value % 2 === 1));
+            console.info(numbers.filter(value => value % 2 === 0));
+        }
+
+        {
+            console.info("------- Array Transform -------");
+            const animals = ["Kucing", "Kelinci", "Bebek", "Ayam", "Tikus", "Gajah"];
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            const animalsUpper = animals.map(value => value.toUpperCase());
+            console.info(animalsUpper);
+
+            const animalsReduce = animals.reduce((before, value) => `${before} ${value}`);
+            const animalsReduceRight = animals.reduceRight((before, value) => `${before} ${value}`);
+            const numbersReduce = numbers.reduce((before, value) => before + value);
+
+            console.info(animalsReduce);
+            console.info(animalsReduceRight);
+            console.info(numbersReduce);
+        }
+    </script>
+</body>
+
+</html>
