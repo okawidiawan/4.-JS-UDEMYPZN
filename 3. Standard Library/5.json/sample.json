@@ -1,0 +1,9 @@
+{
+  "firstName": "Oka",
+  "lastName": "Widiawan",
+  "address": {
+    "country": "Indonesia",
+    "city": "Jakarta"
+  },
+  "hobbies": ["Coding, Gaming, Badminton"]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        {
+            console.info("-------- Object Freeze & Seal --------");
+            const person = {
+                firstName: "Oka",
+                lastName: "Widiawan"
+            }
+            // Object.freeze(person); // Object.freeze digunakan agar properties dan atributnya tidak bisa dirubah atau dihapus
+            Object.seal(person); // Object.seal digunakan agar propertisnya tidak bisa diubah atau dihapus, tetapi valuenya masih bisa dirubah
+            person.firstName = "Ozu"; // firstname tidak berubah
+            delete person.lastName; //atribute lastName tidak bisa dihapus
+            person.middleName = "Bezarius";
+            console.info(person);
+        }
+
+        {
+            console.info("-------- Object Assign --------");
+            const target = {
+                firstName: "Oka",
+                middleName: "Ozu"
+            };
+            const source = {
+                lastName: "Widiawan",
+                middleName: "Bezarius"
+            };
+
+            Object.assign(target, source); // mengcopy object properties dan valuenya dari source ke target
+            console.info(target);
+            console.info(source);
+        }
+
+        {
+            console.info("-------- Object Property Name & Value --------");
+            const person = {
+                firstName: "Oka",
+                lastName: "Widiawan"
+            };
+            console.info(Object.values(person)); // untuk mengambil values dari properti object person
+            console.info(Object.getOwnPropertyNames(person)); // untuk mengambil properti dari object person
+        }
+    </script>
+</body>
+
+</html>
