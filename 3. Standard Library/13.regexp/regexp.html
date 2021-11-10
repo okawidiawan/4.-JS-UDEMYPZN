@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+
+<body>
+    <script>
+        {
+            // Membuat RegExp atau Regular Expression
+            const regex1 = /oka/;
+            const regex2 = new RegExp("oka");
+            const regex3 = new RegExp(/oka/);
+        }
+
+        {
+            // Menggunakan instance method pada regexp
+            console.info("----- Instance Method RegExp (exec & test) -----");
+            const name = "oka widiawan oka bezarius";
+            const regex = /bezarius/;
+
+            let result = regex.exec(name);
+            console.info(result);
+            console.info(regex.exec("ozu"));
+
+            let test = regex.test(name);
+            console.info(test);
+            console.info(regex.test("ozu"));
+        }
+
+        {
+            // RegExp Modifier
+            console.info("----- RegExp Modifier -----");
+            const name = "oka widiawan\noKa ozu\noca WidiawaN";
+            const regex1 = /^oka/igm;
+            const regex2 = /Widiawan/ig;
+
+            let result;
+            while ((result = regex1.exec(name)) !== null) {
+                console.info(result);
+            }
+
+            while ((result = regex2.exec(name)) !== null) {
+                console.info(result);
+            }
+        }
+
+        {
+            // Advance RegExp
+            console.info("----- Advance RegExp -----");
+            const regex = /ok[aiueo]/ig;
+            const name = "oka oki oku oke oca okke oko ako kao oka ";
+
+            let result;
+            while ((result = regex.exec(name)) !== null) {
+                console.info(result);
+            }
+        }
+
+        {
+            // String Regular Expression
+            console.info("----- String Regular Expression -----");
+            const name = "akkoka oka oki oku oke oca okke oko ako kao oka ";
+            console.info(name.match(/ok[aiueo]/ig));
+            console.info(name.search(/ok[aiueo]/ig));
+            console.info(name.replace(/ok[aiueo]/i, "aku"));
+            console.info(name.replaceAll(/ok[aiueo]/ig, "aku"));
+            console.info(name.split(/e/ig));
+        }
+    </script>
+</body>
+
+</html>
