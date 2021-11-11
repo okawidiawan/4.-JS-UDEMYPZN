@@ -9,49 +9,12 @@
 </head>
 
 <body>
-    <script>
+    <script type="module">
+        import { balikKata, fizzBuzz, palindrome } from "./script/aggregate.js";
 
-        {
-            // FUNCTION UNTUK MEMBUAT FIZZ BUZZ
-            // function fizzBuzz(n) {
-            //     for (let i = 1; i <= n; i++) {
-            //         if (i % 3 === 0 && i % 5 === 0) {
-            //             console.info("Fizz Buzz");
-            //         } else if (i % 3 === 0) {
-            //             console.info("Fizz");
-            //         } else if (i % 5 === 0) {
-            //             console.info("Buzz");
-            //         } else {
-            //             console.info(i);
-            //         }
-            //     }
-            // }
-            // fizzBuzz(100);
-        }
-
-        {
-            // FUNCTION UNTUK MEMBALIK KATA
-            // function balikKata(value) {
-            //     let result = '';
-            //     for (i = value.length; i > 0; i--) {
-            //         result += value[i - 1];
-            //     }
-            //     return console.info(result.toLocaleUpperCase());
-            // }
-            // balikKata(prompt());
-        }
-
-        {
-            function palindrome(value) {
-                let result = '';
-                for (i = value.length; i > 0; i--) {
-                    result += value[i - 1];
-                }
-                return console.info(result === value);
-            }
-            palindrome(prompt());
-        }
-
+        balikKata("Oka Widiawan");
+        // fizzBuzz(100);
+        palindrome(prompt());
 
     </script>
 </body>
