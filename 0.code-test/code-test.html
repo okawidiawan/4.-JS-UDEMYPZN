@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Test</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script type="module">
-        import { balikKata, fizzBuzz, palindrome } from "./script/aggregate.js";
+      import {
+        balikKata,
+        fizzBuzz,
+        palindrome,
+        vBola,
+        lBola,
+        mean,
+        median,
+        modus,
+      } from "./script/aggregate.js";
 
-        balikKata("Oka Widiawan");
-        // fizzBuzz(100);
-        palindrome(prompt());
-
+      // balikKata("Oka Widiawan");
+      // fizzBuzz(100);
+      // palindrome(prompt());
+      //   vBola(15);
+      //   lBola(15);
+      mean(1, 30, 10, 100, 20, 20, 30, 10, 10, 2, 1, 7);
+      median(1, 30, 10, 100, 20, 20, 30, 10, 10, 2, 1, 7);
+      modus(1, 30, 10, 100, 20, 20, 30, 10, 10, 2, 1, 7);
     </script>
-</body>
-
+  </body>
 </html>
