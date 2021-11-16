@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Target</title>
+  </head>
+  <body>
+    <input id="klikSaya" type="button" value="Klik Saya Dong!!!" />
+
+    <script>
+      const tombol = document.getElementById("klikSaya");
+      tombol.addEventListener("click", function () {
+        tombol.setAttribute("value", "Ini Saya Klik Yakkk!!!");
+      });
+
+      tombol.addEventListener("click", function () {
+        console.info("Saya Ngeklik Nichhh");
+      });
+    </script>
+  </body>
+</html>
