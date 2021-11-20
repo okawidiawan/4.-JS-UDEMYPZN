@@ -1,0 +1,12 @@
+{
+    "response":"Halooo Oka",
+    "nickName":"Oka",
+    "firstName":"Oka",
+    "lastName":"Widiawan",
+    "fullName": "Oka Widiawan",
+    "hobi":{
+"pertama":"Gaming",
+"kedua":"Tidur",
+"ketiga":"Badminton"
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <h1 id="response"></h1>
+    <script>
+      const ajax = new XMLHttpRequest();
+
+      ajax.open("GET", "api/halo.json");
+      ajax.addEventListener("load", function () {
+        const json = JSON.parse(ajax.responseText);
+        const header = document.getElementById("response");
+        const paragraf = document.createElement("p");
+        header.textContent = json.fullName;
+        paragraf.textContent = `Hobi : ${json.hobi.kedua}`;
+        header.appendChild(paragraf);
+      });
+      ajax.send();
+    </script>
+  </body>
+</html>
