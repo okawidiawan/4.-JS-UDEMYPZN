@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise All</title>
+  </head>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td>ID :</td>
+          <td id="id"></td>
+        </tr>
+        <tr>
+          <td>Name :</td>
+          <td id="name"></td>
+        </tr>
+        <tr>
+          <td>Price :</td>
+          <td id="price"></td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      function getProduct(product) {
+        return new Promise(function (resolve, reject) {
+          const ajax = new XMLHttpRequest();
+          ajax.open("GET", `api/${product}.json`);
+          ajax.onload = function () {
+            if (ajax.status === 200) {
+              resolve(ajax.responseText);
+            } else {
+              reject(`Error Get Product with response : ${ajax.status}`);
+            }
+          };
+          ajax.send();
+        });
+      }
+
+      // Promise.all untuk mengambil data promise sekaligus dan harus valid
+      //   const promise = Promise.all([
+      //     getProduct("product1"),
+      //     getProduct("product2"),
+      //     getProduct("product3"),
+      //   ]);
+
+      // Promise.any untuk mengambil data promise yang tercepat dan data valid
+      //   const promise = Promise.any([
+      //     getProduct("product1"),
+      //     getProduct("product2"),
+      //     getProduct("product3"),
+      //   ]);
+
+      // Promise.race untuk mengambil data promise yang tercepat tidak peduli data error atau tidak
+      const promise = Promise.race([
+        getProduct("product1aa"),
+        getProduct("product2"),
+        getProduct("product3"),
+      ]);
+      promise.then(function (products) {
+        console.info(products);
+      });
+    </script>
+  </body>
+</html>
